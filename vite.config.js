@@ -4,9 +4,9 @@ import federation from '@originjs/vite-plugin-federation'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(),federation({
-    filename: "user-front-entry.js",
-    name: "user-fron",
+  plugins: [react(), federation({
+    filename: "cow-user-front-entry.js",
+    name: "cow-user-front",
     shared: ["react", "react-dom"],
     exposes: {
       "./Users": "./src/components/users/Users.jsx",
@@ -20,7 +20,7 @@ export default defineConfig({
   },
   server: {
     host: true,
-    port: 8081, // This is the port which we will use in docker
+    port: 3000, // This is the port which we will use in docker
     // Thanks @sergiomoura for the window fix
     // add the next lines if you're using windows and hot reload doesn't work
     watch: {
