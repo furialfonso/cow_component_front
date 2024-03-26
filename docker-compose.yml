@@ -7,8 +7,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    volumes:
-      - ./src:/app/src
+      volumes:
+        - ./src:/app/src
     ports:
       - ${API_PROT}:${DEFAULT_API_PORT}
     networks:

@@ -5,8 +5,8 @@ import federation from '@originjs/vite-plugin-federation'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), federation({
-    filename: "cow-user-front-entry.js",
-    name: "cow-user-front",
+    filename: "cow-component-front-entry.js",
+    name: "cow-component-front",
     shared: ["react", "react-dom"],
     exposes: {
       "./Users": "./src/components/users/Users.jsx",
