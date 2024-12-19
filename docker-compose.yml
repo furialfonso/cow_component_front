@@ -1,16 +1,14 @@
-version: "3.4"
-
 services:
   front:
-    container_name: ${APPLICATION_NAME}_front_${SCOPE}
-    image: ${REPOSITORY}/${APPLICATION_NAME}_front:${SCOPE}
+    container_name: ${APPLICATION_NAME}
+    image: ${REPOSITORY}/${APPLICATION_NAME}:${SCOPE}
     build:
       context: .
       dockerfile: Dockerfile
     volumes:
       - ./src:/app/src
     ports:
-      - ${API_PORT}:${DEFAULT_API_PORT}
+      - ${SSO_EXTERNAL_PORT}:${SSO_INTERNAL_PORT}
     networks:
       - cownetwork
 networks:
