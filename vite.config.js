@@ -28,6 +28,6 @@ export default defineConfig({
     }
   },
   preview: {
-    port: 8082,
+    port: 8084,
   }
 })
