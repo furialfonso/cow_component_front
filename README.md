@@ -1,4 +1,4 @@
-# cow_component_front
+# cow-comp-front
 
 microfrontends api
 
